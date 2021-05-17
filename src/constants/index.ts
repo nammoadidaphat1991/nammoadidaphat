@@ -24,7 +24,7 @@ export const TIMELOCK_ADDRESS = '0x1a9C8182C09F50C8318d769245beA52c32BE35BC'
 export const SUSHI: ChainTokenMap = {
     [ChainId.MAINNET]: new Token(
         ChainId.MAINNET,
-        '0x6B3595068778DD592e39A122f4f5a5cF09C90fE2',
+        '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
         18,
         'SUSHI',
         'SushiToken'
@@ -109,6 +109,8 @@ export const BSC: { [key: string]: Token } = {
     USDC: new Token(ChainId.BSC, '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d', 18, 'USDC', 'USD Coin'),
     USDT: new Token(ChainId.BSC, '0x55d398326f99059fF775485246999027B3197955', 18, 'USDT', 'Tether USD'),
     BTCB: new Token(ChainId.BSC, '0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c', 18, 'BTCB', 'Bitcoin')
+    HERMANO: new Token(ChainId.BSC, '0xD087f3e2CBfD9C26c2Ae47a6b464B6c9a93156BF', 9, 'HERMANO', 'HERMANO')
+
 }
 
 export const FANTOM: { [key: string]: Token } = {
@@ -132,7 +134,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     [ChainId.MAINNET]: [...WRAPPED_NATIVE_ONLY[ChainId.MAINNET], DAI, USDC, USDT, COMP, MKR, WBTC, RUNE, NFTX, STETH],
     [ChainId.MATIC]: [...WRAPPED_NATIVE_ONLY[ChainId.MATIC], MATIC.USDC, MATIC.WBTC, MATIC.DAI, MATIC.WETH, MATIC.USDT],
     [ChainId.FANTOM]: [...WRAPPED_NATIVE_ONLY[ChainId.FANTOM], FANTOM.DAI, FANTOM.USDC, FANTOM.WBTC, FANTOM.WETH],
-    [ChainId.BSC]: [...WRAPPED_NATIVE_ONLY[ChainId.BSC], BSC.DAI, BSC.USD, BSC.USDC, BSC.USDT, BSC.BTCB]
+    [ChainId.BSC]: [...WRAPPED_NATIVE_ONLY[ChainId.BSC], BSC.DAI, BSC.USD, BSC.USDC, BSC.USDT, BSC.BTCB, HERMANO.HERMANO]
 }
 
 export const CREAM = new Token(ChainId.MAINNET, '0x2ba592F78dB6436527729929AAf6c908497cB200', 18, 'CREAM', 'Cream')
@@ -200,13 +202,13 @@ export const PLAY = new Token(
 
 export const XSUSHI_CALL = new Token(
     ChainId.MAINNET,
-    '0xada279f9301C01A4eF914127a6C2a493Ad733924',
-    18,
+    '0xD087f3e2CBfD9C26c2Ae47a6b464B6c9a93156BF',
+    9,
     'XSUc25-0531',
     'XSUSHI 25 Call [31 May 2021]'
 )
 
-export const XSUSHI = new Token(ChainId.MAINNET, '0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272', 18, 'xSUSHI', 'SushiBar')
+export const HERMANO = new Token(ChainId.MAINNET, '0xD087f3e2CBfD9C26c2Ae47a6b464B6c9a93156BF', 9, 'Hermano Finance', 'HERMANO')
 
 /**
  * Some tokens can only be swapped via certain pairs, so we override the list of bases that are considered for these

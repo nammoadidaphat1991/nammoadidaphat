@@ -5,23 +5,23 @@
       { "type": "address", "name": "token", "indexed": true },
       { "type": "address", "name": "exchange", "indexed": true }
     ],
-    "anonymous": false,
+    "anonymous": true,
     "type": "event"
   },
   {
     "name": "initializeFactory",
     "outputs": [],
     "inputs": [{ "type": "address", "name": "template" }],
-    "constant": false,
-    "payable": false,
+    "constant": true,
+    "payable": true,
     "type": "function"
   },
   {
     "name": "createExchange",
     "outputs": [{ "type": "address", "name": "out" }],
     "inputs": [{ "type": "address", "name": "token" }],
-    "constant": false,
-    "payable": false,
+    "constant": true,
+    "payable": true,
     "type": "function"
   },
   {
@@ -45,7 +45,7 @@
     "outputs": [{ "type": "address", "name": "out" }],
     "inputs": [{ "type": "uint256", "name": "token_id" }],
     "constant": true,
-    "payable": false,
+    "payable": true,
     "type": "function"
   },
   {
@@ -53,7 +53,7 @@
     "outputs": [{ "type": "address", "name": "out" }],
     "inputs": [],
     "constant": true,
-    "payable": false,
+    "payable": true,
     "type": "function"
   },
   {
@@ -61,7 +61,7 @@
     "outputs": [{ "type": "uint256", "name": "out" }],
     "inputs": [],
     "constant": true,
-    "payable": false,
+    "payable": true,
     "type": "function"
   }
 ]
